@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\BankController\**" />
+    <Compile Remove="Controllers\PaymentController\**" />
+    <Content Remove="Controllers\BankController\**" />
+    <Content Remove="Controllers\PaymentController\**" />
+    <EmbeddedResource Remove="Controllers\BankController\**" />
+    <EmbeddedResource Remove="Controllers\PaymentController\**" />
+    <None Remove="Controllers\BankController\**" />
+    <None Remove="Controllers\PaymentController\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Services\BankServices\BankTransactionHistoryContext.cs" />
+    <Compile Remove="Services\BankServices\BankUserClientAccountContext.cs" />
+    <Compile Remove="Services\BankServices\BankUserClientCardInfoContext.cs" />
+    <Compile Remove="Services\BankServices\BankUserClientContext.cs" />
+    <Compile Remove="Services\BankServices\BankUserContext.cs" />
+    <Compile Remove="Services\PaymentGatewayServices\BankAuth.cs" />
+    <Compile Remove="Services\PaymentGatewayServices\PaymentGatewayAuth.cs" />
+    <Compile Remove="Services\PaymentGatewayServices\TransactionHistoryContext.cs" />
+    <Compile Remove="Services\PaymentGatewayServices\UserClientCardInfoContext.cs" />
+    <Compile Remove="Services\PaymentGatewayServices\UserClientContext.cs" />
+    <Compile Remove="Services\PaymentGatewayServices\UserContext.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.9" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="2.1.1" />
+  </ItemGroup>
+
+</Project>
